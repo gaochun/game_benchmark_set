@@ -27,11 +27,8 @@ var ITEM_TAG_BASIC = 1000;
 var nCurCase = 0;
 
 var PerformanceTests = [
-    "PerformanceNodeChildrenTest",
     "PerformanceParticleTest",
     "PerformanceSpriteTest",
-    "PerformanceTextureTest",
-    "PerformanceTouchesTest",
     "PerformanceAnimationTest",
     "Automated Sprite Performarnce Test"
 ];
@@ -40,8 +37,6 @@ var PerformanceTests = [
 // It is pretty irrelevant in JSB so we don't include it in JSB.
 // "PerformanceVirtualMachineTest" is inserted before
 // "Automated Sprite Performarnce Test".
-if (!cc.sys.isNative)
-    PerformanceTests.splice(6, 0, "PerformanceVirtualMachineTest");
 
 ////////////////////////////////////////////////////////
 //
@@ -78,34 +73,15 @@ var PerformanceMainLayer = cc.LayerGradient.extend({
         // create the test scene and run it
         switch (index) {
             case 0:
-                runNodeChildrenTest();
-                break;
-            case 1:
                 runParticleTest();
                 break;
-            case 2:
+            case 1:
                 runSpriteTest();
                 break;
-            case 3:
-                runTextureTest();
-                break;
-            case 4:
-                runTouchesTest();
-                break;
-            case 5:
+            case 2:
                 runAnimationTest();
                 break;
-            case 6:
-                if (!cc.sys.isNative) {
-                    runVirtualMachineTest();
-                    break;
-                }
-                // Else, fall through (JSB).
-                // TODO: For now I think it's ugly to have "Automated Sprite
-                // Perforance Test" come before "PerformanceVirtualMachineTest",
-                // that's why there's ugly code like this. Let's think about
-                // this later.
-            case 7:
+            case 3:
                 runPerformanceSpriteTest2();
                 break;
             default:
