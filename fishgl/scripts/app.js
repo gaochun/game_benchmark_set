@@ -3335,6 +3335,7 @@ Xiaosong*/
             this.origin3D = null ,
             this.soundManager = null ,
             this.matrixWorld = new THREE.Matrix4,
+            this.stats = new Stats(),
             this.groups = {
                 TEST: "Test",
                 GLASS: "Glass",
@@ -4063,7 +4064,8 @@ Xiaosong*/
             animate: function() {
                 a.requestAnimationFrame(this.animate.bind(this)),
                 this.controller.update(this.mouseHandler.isDragging),
-                this.render()
+                this.render(),
+                this.stats.update()
                 //c.perfStats.update()
             },
             cM4: new THREE.Matrix4,
