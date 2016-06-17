@@ -4170,7 +4170,7 @@ Xiaosong*/
         var e = $.url()
           , f = void 0 !== e.param("full")
           , g = Modernizr.Detectizr.device || {};
-        if (!f && ("mobile" === g.type || "tv" === g.type))
+        if (!f && ("tv" === g.type))
             return void (document.location.href = "mobile/");
         c.sounds.init(),
         $(document).ready(function() {
