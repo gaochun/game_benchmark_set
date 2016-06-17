@@ -230,7 +230,8 @@ var egret3d;
             if (this.lastFps == value)
                 return;
             this.lastFps = value;
-            this.textDiv.innerHTML = "Egret3D " + value + "fps";
+            // this.textDiv.innerHTML = "Egret3D " + value + "fps";
+	    console.log("Egret3D " + value + "fps");
         };
         return LoadingUI;
     }(egret3d.Object3D));
