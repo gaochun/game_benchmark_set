@@ -136,10 +136,10 @@ function resizeCanvas() {
 	var canvas = document.getElementById("game-canvas");
 	canvas.style.width = window.innerWidth;
 	canvas.style.height = window.innerHeight;
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	realwidth = window.innerWidth;
-	realheight = window.innerHeight;
+	canvas.width = window.innerWidth*window.devicePixelRatio;
+	canvas.height = window.innerHeight*window.devicePixelRatio;
+	realwidth = window.innerWidth*window.devicePixelRatio;
+	realheight = window.innerHeight*window.devicePixelRatio;
 }
 
 
@@ -307,7 +307,7 @@ function DrawFrame() {
 		mousestarty = mousey;
 	}
 	prevmouseout = mouseout;
-	gl.finish();
+	// gl.finish();
 	window.stats.update();
 }
 
