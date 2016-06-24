@@ -1,0 +1,30 @@
+{
+	"groups": [
+		{
+			"keys": "dragonBonesData,textureDataA,textureA,textureDataB,textureB",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "dragonBonesData",
+			"type": "json",
+			"url": "assets/SequenceAnimation/SequenceAnimation.json"
+		},
+		{
+			"name": "textureDataA",
+			"type": "json",
+			"url": "assets/SequenceAnimation/texture.json"
+		},
+		{
+			"name": "textureA",
+			"type": "image",
+			"url": "assets/SequenceAnimation/texture.png"
+		}
+	]
+}

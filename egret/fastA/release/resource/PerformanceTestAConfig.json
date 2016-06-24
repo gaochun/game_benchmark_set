@@ -1,0 +1,30 @@
+{
+	"groups": [
+		{
+			"keys": "dragonBonesData,textureDataA,textureA",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "dragonBonesData",
+			"type": "json",
+			"url": "assets/Dragon/Dragon.json"
+		},
+		{
+			"name": "textureDataA",
+			"type": "json",
+			"url": "assets/Dragon/texture.json"
+		},
+		{
+			"name": "textureA",
+			"type": "image",
+			"url": "assets/Dragon/texture.png"
+		}
+	]
+}
